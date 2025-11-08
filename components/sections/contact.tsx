@@ -1,6 +1,6 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 export function ContactSection() {
   return (
@@ -18,8 +18,9 @@ export function ContactSection() {
             Hai să stabilim o vizionare.
           </h2>
           <p className="text-balance text-sm text-muted-foreground sm:text-base">
-            Suntem disponibili telefonic pentru detalii despre apartamente și programarea unei vizionări la
-            ansamblul Mr Lucass Residence. Completează formularul sau sună-ne direct.
+            Suntem disponibili telefonic pentru detalii despre apartamente și
+            programarea unei vizionări la ansamblul Mr Lucass Residence.
+            Completează formularul sau sună-ne direct.
           </p>
         </div>
 
@@ -27,10 +28,12 @@ export function ContactSection() {
         <div className="grid gap-8 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)] md:items-start">
           {/* Contact info */}
           <div className="space-y-4 rounded-2xl border bg-card/80 p-5 shadow-soft">
-            <h3 className="text-base font-semibold sm:text-lg">Date de contact</h3>
+            <h3 className="text-base font-semibold sm:text-lg">
+              Date de contact
+            </h3>
             <p className="text-sm text-muted-foreground">
-              Pentru informații despre apartamente și programarea unei vizionări, ne poți contacta telefonic
-              sau prin WhatsApp.
+              Pentru informații despre apartamente și programarea unei
+              vizionări, ne poți contacta telefonic sau prin WhatsApp.
             </p>
 
             <div className="space-y-3 text-sm">
@@ -43,22 +46,26 @@ export function ContactSection() {
                     <span className="inline-flex h-7 items-center rounded-full bg-accent/10 px-3 text-xs font-medium text-accent-foreground">
                       Principal
                     </span>
-                    <a href="tel:+40741274273" className="font-medium hover:underline">
-                      (0741) 274 273
+                    <a
+                      href="tel:+40754439439"
+                      className="font-medium hover:underline"
+                    >
+                      (0754) 439 439
                     </a>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="inline-flex h-7 items-center rounded-full bg-accent/10 px-3 text-xs font-medium text-accent-foreground">
                       Alternativ
                     </span>
-                    <a href="tel:+40754439439" className="font-medium hover:underline">
-                      (0754) 439 439
+
+                    <a
+                      href="tel:+40741274273"
+                      className="font-medium hover:underline"
+                    >
+                      (0741) 274 273
                     </a>
                   </div>
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  Program recomandat: luni–vineri, 09:00–18:00.
-                </p>
               </div>
 
               {/* <div className="space-y-1 pt-2">
@@ -79,7 +86,9 @@ export function ContactSection() {
               </div> */}
 
               <div className="space-y-1 pt-2 text-sm">
-                <h4 className="text-sm font-semibold text-foreground">Locație</h4>
+                <h4 className="text-sm font-semibold text-foreground">
+                  Locație
+                </h4>
                 <p className="text-muted-foreground">
                   Str. Barbu Catargi, Nr. 18C, Palazu Mare, Constanța
                 </p>
@@ -103,10 +112,12 @@ export function ContactSection() {
           {/* Map card */}
           <div className="space-y-3 rounded-2xl border bg-card/80 p-5 shadow-soft">
             <div className="space-y-1">
-              <h3 className="text-sm font-semibold sm:text-base">Harta ansamblului</h3>
+              <h3 className="text-sm font-semibold sm:text-base">
+                Harta ansamblului
+              </h3>
               <p className="text-xs text-muted-foreground sm:text-sm">
-                Ansamblul este situat în zona Palazu Mare, cu acces facil către principalele puncte de interes
-                din Constanța.
+                Ansamblul este situat în zona Palazu Mare, cu acces facil către
+                principalele puncte de interes din Constanța.
               </p>
             </div>
             <div className="overflow-hidden rounded-2xl border bg-muted">
@@ -123,5 +134,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

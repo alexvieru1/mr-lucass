@@ -150,18 +150,18 @@ export function ApartamenteSection() {
                           </p>
 
                           <p className="text-xs text-muted-foreground sm:text-sm">
-                            {apt.usableArea.toFixed(2)} m² utili • {apt.balconyArea.toFixed(2)} m² balcon
+                            {apt.usableArea.toFixed(2)} m² utili ({apt.balconyArea.toFixed(2)} m² balcon inclus)
                           </p>
 
                           {/* Price – only for non-sold apartments */}
                           {!isSold && (
                             <div className="space-y-1">
                               <p className="text-lg font-semibold text-foreground">
-                                {formatPrice(apt.totalPrice)} €
+                                {formatPrice(apt.totalPrice)} € + TVA
                               </p>
-                              <p className="text-xs text-muted-foreground">
+                              {/* <p className="text-xs text-muted-foreground">
                                 ~ {formatPrice(apt.pricePerSqm)} €/m²
-                              </p>
+                              </p> */}
                             </div>
                           )}
 

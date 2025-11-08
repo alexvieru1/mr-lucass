@@ -1,4 +1,4 @@
-import { Building2, Car, Leaf, Ruler } from "lucide-react"
+import { Building2, Car, Leaf, Ruler, Flame } from "lucide-react"
 
 export function DespreNoiSection() {
   return (
@@ -34,6 +34,10 @@ export function DespreNoiSection() {
             <p>
               Compartimentarea este realizată din BCA CELCO, iar tâmplăria Barrier 75 cu feronerie RotoNX asigură o
               izolare acustică de până la 44 dB, contribuind la confortul termic și fonic al fiecărui apartament.
+            </p>
+            <p>
+              Fiecare apartament este dotat cu centrală termică proprie, oferind independență energetică și control asupra
+              consumului.
             </p>
             <p>
               Fațada este placată cu polistiren și accente de lemn, completate de un rastel din lemn/metal înierbat,
@@ -82,6 +86,15 @@ export function DespreNoiSection() {
               </div>
               <div className="flex items-start gap-3">
                 <div className="mt-0.5 rounded-xl bg-accent/10 p-2">
+                  <Flame className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Încălzire individuală</p>
+                  <p>Centrală termică proprie pentru fiecare apartament.</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="mt-0.5 rounded-xl bg-accent/10 p-2">
                   <Leaf className="h-4 w-4" />
                 </div>
                 <div>
@@ -90,10 +103,10 @@ export function DespreNoiSection() {
                 </div>
               </div>
             </div>
-            <p className="mt-2 text-xs text-muted-foreground">
+            {/* <p className="mt-2 text-xs text-muted-foreground">
               *Informațiile prezentate au caracter orientativ și pot suferi modificări pe parcursul dezvoltării
               proiectului.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
