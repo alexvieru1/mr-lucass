@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge"
 export function Hero() {
   return (
     <section className="relative isolate flex h-screen w-full bg-linear-to-t from-background via-background to-muted/60">
-      <div className="container flex min-h-[72vh] flex-col items-center gap-10 px-6 pt-24 pb-16 md:flex-row md:justify-between md:py-20 md:px-10 lg:px-16">
+      <div className="container flex min-h-[72vh] flex-col items-center gap-10 px-6 pt-24 pb-24 md:flex-row md:justify-between md:py-20 md:px-10 lg:px-16">
         {/* Text column */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
