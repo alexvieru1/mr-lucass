@@ -4,7 +4,7 @@ export function DespreNoiSection() {
   return (
     <section
       id="despre-noi"
-      className="scroll-section bg-background py-52 md:py-24"
+      className="scroll-section bg-background pt-52 pb-16 md:py-24"
     >
       <div className="container max-w-5xl space-y-10 px-6 md:px-10 lg:px-16">
         {/* Header */}
