@@ -1,0 +1,186 @@
+
+
+export type ApartmentType = "studio" | "2_camere" | "3_camere"
+export type ApartmentView = "spate" | "stradala" | "laterala"
+export type ApartmentStatus = "disponibil" | "rezervat" | "vandut"
+
+export interface Apartment {
+  id: string
+  slug: string
+  type: ApartmentType
+  rooms: number
+  title: string
+  floor: number
+  view: ApartmentView
+  usableArea: number
+  balconyArea: number
+  pricePerSqm: number
+  totalPrice: number
+  currency: "EUR"
+  status: ApartmentStatus
+  image: string
+  notes?: string
+}
+
+export const APARTMENTS: Apartment[] = [
+  {
+    id: "ap-3c-1",
+    slug: "3-camere-etaj-1-vedere-spate",
+    type: "3_camere",
+    rooms: 3,
+    title: "Apartament 3 camere – vedere spate",
+    floor: 1,
+    view: "spate",
+    usableArea: 73.1,
+    balconyArea: 5.52,
+    pricePerSqm: 1650,
+    totalPrice: 106000,
+    currency: "EUR",
+    status: "vandut",
+    image: "/images/apartments/ap-2.webp",
+  },
+  {
+    id: "ap-3c-2",
+    slug: "3-camere-etaj-1-vedere-stradala",
+    type: "3_camere",
+    rooms: 3,
+    title: "Apartament 3 camere – vedere stradală",
+    floor: 1,
+    view: "stradala",
+    usableArea: 77.55,
+    balconyArea: 12.02,
+    pricePerSqm: 1650,
+    totalPrice: 171000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-3.webp",
+  },
+  {
+    id: "ap-3c-3",
+    slug: "3-camere-etaj-2-vedere-spate",
+    type: "3_camere",
+    rooms: 3,
+    title: "Apartament 3 camere – vedere spate",
+    floor: 2,
+    view: "spate",
+    usableArea: 73.1,
+    balconyArea: 5.52,
+    pricePerSqm: 1650,
+    totalPrice: 147000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-5.webp",
+  },
+  {
+    id: "ap-3c-4",
+    slug: "3-camere-etaj-2-vedere-stradala",
+    type: "3_camere",
+    rooms: 3,
+    title: "Apartament 3 camere – vedere stradală",
+    floor: 2,
+    view: "stradala",
+    usableArea: 77.55,
+    balconyArea: 12.02,
+    pricePerSqm: 1650,
+    totalPrice: 171000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-6.webp",
+  },
+  {
+    id: "ap-3c-5",
+    slug: "3-camere-etaj-3-vedere-stradala",
+    type: "3_camere",
+    rooms: 3,
+    title: "Apartament 3 camere – vedere stradală",
+    floor: 3,
+    view: "stradala",
+    usableArea: 67.04,
+    balconyArea: 24.82,
+    pricePerSqm: 1650,
+    totalPrice: 118560,
+    currency: "EUR",
+    status: "vandut",
+    image: "/images/apartments/ap-9.webp",
+  },
+  {
+    id: "ap-3c-6",
+    slug: "3-camere-etaj-3-vedere-spate",
+    type: "3_camere",
+    rooms: 3,
+    title: "Apartament 3 camere – vedere spate",
+    floor: 3,
+    view: "spate",
+    usableArea: 60.85,
+    balconyArea: 37.22,
+    pricePerSqm: 1650,
+    totalPrice: 160000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-8.webp",
+  },
+  {
+    id: "ap-3c-7",
+    slug: "3-camere-etaj-4-vedere-stradala",
+    type: "3_camere",
+    rooms: 3,
+    title: "Apartament 3 camere – vedere stradală",
+    floor: 4,
+    view: "stradala",
+    usableArea: 53.96,
+    balconyArea: 50,
+    pricePerSqm: 1650,
+    totalPrice: 169000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-7.webp",
+  },
+  {
+    id: "ap-2c-1",
+    slug: "2-camere-etaj-1-vedere-laterala",
+    type: "2_camere",
+    rooms: 2,
+    title: "Apartament 2 camere – vedere laterală",
+    floor: 1,
+    view: "laterala",
+    usableArea: 55,
+    balconyArea: 8.49,
+    pricePerSqm: 1650,
+    totalPrice: 110000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-1.webp",
+  },
+  {
+    id: "ap-2c-2",
+    slug: "2-camere-etaj-2-vedere-laterala",
+    type: "2_camere",
+    rooms: 2,
+    title: "Apartament 2 camere – vedere laterală",
+    floor: 2,
+    view: "laterala",
+    usableArea: 55,
+    balconyArea: 8.49,
+    pricePerSqm: 1650,
+    totalPrice: 110000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-4.webp",
+  },
+  {
+    id: "ap-st-1",
+    slug: "studio-etaj-4-vedere-spate",
+    type: "studio",
+    rooms: 1,
+    title: "Studio – vedere spate",
+    floor: 4,
+    view: "spate",
+    usableArea: 36.66,
+    balconyArea: 60,
+    pricePerSqm: 1650,
+    totalPrice: 134000,
+    currency: "EUR",
+    status: "disponibil",
+    image: "/images/apartments/ap-10.webp",
+  },
+]

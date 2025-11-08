@@ -59,7 +59,7 @@ export function GalerieSection() {
                     <div
                       className={
                         "relative " +
-                        (photo.orientation === "portrait" ? "aspect-[3/4]" : "aspect-[4/3]")
+                        (photo.orientation === "portrait" ? "aspect-3/4" : "aspect-4/3")
                       }
                     >
                       <Image
@@ -91,7 +91,7 @@ export function GalerieSection() {
                       key={photo.src}
                       className="group overflow-hidden rounded-2xl border bg-card/80 shadow-soft"
                     >
-                      <div className="relative aspect-[16/9] md:aspect-[3/2]">
+                      <div className="relative aspect-video md:aspect-3/2">
                         <Image
                           src={photo.src}
                           alt={photo.alt}
@@ -113,7 +113,7 @@ export function GalerieSection() {
                       key={photo.src}
                       className="group overflow-hidden rounded-2xl border bg-card/80 shadow-soft"
                     >
-                      <div className="relative aspect-[3/4]">
+                      <div className="relative aspect-3/4">
                         <Image
                           src={photo.src}
                           alt={photo.alt}
@@ -131,7 +131,7 @@ export function GalerieSection() {
         </div>
 
         {/* Separator */}
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
+        <div className="h-px w-full bg-linear-to-r from-transparent via-border to-transparent" />
 
         {/* Bloc B: Evoluția construcției */}
         <div className="space-y-6">

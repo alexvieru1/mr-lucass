@@ -36,7 +36,7 @@ export function Hero() {
               size="lg"
               className="rounded-xl bg-accent text-accent-foreground hover:bg-accent/90"
             >
-              <Link href="/apartamente">Vezi apartamentele</Link>
+              <Link href="#apartamente">Vezi apartamentele</Link>
             </Button>
 
             <Button
@@ -45,7 +45,7 @@ export function Hero() {
               variant="outline"
               className="rounded-xl"
             >
-              <Link href="/contact">Programează o vizionare</Link>
+              <Link href="#contact">Programează o vizionare</Link>
             </Button>
           </div>
 
