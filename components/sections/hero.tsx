@@ -50,9 +50,11 @@ export function Hero() {
           </div>
 
           <div className="mt-4 flex flex-wrap justify-center gap-3 text-xs text-muted-foreground sm:text-sm md:justify-start">
-            <span>• Studio, 2 și 3 camere</span>
-            <span>• Locuri de parcare</span>
-            <span>• Zonă centrală</span>
+            <span>• Studio</span>
+            <span>• Apartamente 2 camere</span>
+            <span>• Apartamente 3 camere</span>
+            <span>• Locuri de parcare supraterane</span>
+            {/* <span>• Zonă centrală</span> */}
           </div>
         </motion.div>
 
