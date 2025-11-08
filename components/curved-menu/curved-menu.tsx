@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type MouseEvent } from "react";
 import styles from "./curved-menu.module.css";
 
 // cspell:ignore Awwwards Dribbble
@@ -123,6 +123,26 @@ function MenuPanel({ closeMenu }: MenuPanelProps) {
     setTheme(nextTheme);
   };
 
+  const handleAnchorNavigation = (
+    event: MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    closeMenu();
+
+    if (!href.startsWith("#")) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const target = document.querySelector(href);
+    if (target instanceof HTMLElement) {
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  };
+
   return (
     <motion.aside
       className={styles.panel}
@@ -150,7 +170,11 @@ function MenuPanel({ closeMenu }: MenuPanelProps) {
                 variants={indicatorScale}
                 animate={selected === item.href ? "open" : "closed"}
               />
-              <Link href={item.href} onClick={closeMenu}>
+              <Link
+                href={item.href}
+                scroll={false}
+                onClick={(event) => handleAnchorNavigation(event, item.href)}
+              >
                 {item.title}
               </Link>
             </motion.div>
