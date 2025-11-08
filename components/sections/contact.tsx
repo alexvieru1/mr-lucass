@@ -20,7 +20,6 @@ export function ContactSection() {
           <p className="text-balance text-sm text-muted-foreground sm:text-base">
             Suntem disponibili telefonic pentru detalii despre apartamente și
             programarea unei vizionări la ansamblul Mr Lucass Residence.
-            Completează formularul sau sună-ne direct.
           </p>
         </div>
 
@@ -104,7 +103,7 @@ export function ContactSection() {
 
             <div className="mt-4 flex flex-wrap gap-3">
               <Button asChild size="sm" className="rounded-xl">
-                <a href="tel:+40741274273">Sună acum</a>
+                <a href="tel:+40754439439">Sună acum</a>
               </Button>
             </div>
           </div>

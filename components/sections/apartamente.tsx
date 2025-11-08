@@ -1,5 +1,3 @@
-
-
 import Image from "next/image"
 import Link from "next/link"
 
@@ -34,6 +32,22 @@ function formatPrice(value: number) {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(value)
+}
+
+function formatAreas(usableArea: number, balconyArea: number) {
+  if (!balconyArea || balconyArea <= 0) {
+    return `${usableArea.toFixed(2)} m² utili`
+  }
+
+  const ratio = balconyArea / usableArea
+
+  // Small/medium balcony: show as "included" in parentheses
+  if (ratio <= 0.3) {
+    return `${usableArea.toFixed(2)} m² utili (${balconyArea.toFixed(2)} m² balcon inclus)`
+  }
+
+  // Large balcony/terasă: show as separate added surface
+  return `${usableArea.toFixed(2)} m² utili + ${balconyArea.toFixed(2)} m² balcon`
 }
 
 export function ApartamenteSection() {
@@ -150,7 +164,7 @@ export function ApartamenteSection() {
                           </p>
 
                           <p className="text-xs text-muted-foreground sm:text-sm">
-                            {apt.usableArea.toFixed(2)} m² utili ({apt.balconyArea.toFixed(2)} m² balcon inclus)
+                            {formatAreas(apt.usableArea, apt.balconyArea)}
                           </p>
 
                           {/* Price – only for non-sold apartments */}
