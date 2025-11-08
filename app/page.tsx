@@ -1,9 +1,11 @@
+import { DespreNoiSection } from "@/components/sections/despre-noi";
 import { Hero } from "@/components/sections/hero";
 
 export default function Home() {
   return (
-    <div className="h-[2000px]">
+    <div >
       <Hero/>
+      <DespreNoiSection/>
     </div>
   );
 }
