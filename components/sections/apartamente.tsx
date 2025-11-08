@@ -37,7 +37,6 @@ function formatPrice(value: number) {
 }
 
 export function ApartamenteSection() {
-  // group apartments by type and sort: disponbil, rezervat, vandut
   const groupedByType: Record<ApartmentType, Apartment[]> = {
     "2_camere": [],
     "3_camere": [],
