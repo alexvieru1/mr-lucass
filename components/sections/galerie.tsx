@@ -6,6 +6,9 @@ import { PROGRESS_PHOTOS } from "@/lib/constants/progress-photos"
 
 export function GalerieSection() {
   const exteriorPhotos = CURRENT_PHOTOS.filter((p) => p.category === "Exterior")
+  const privelistePhotos = CURRENT_PHOTOS.filter((p) => p.category === "Priveliste")
+  const privelisteHero = privelistePhotos.find((p) => p.orientation === "landscape")
+  const privelistePortrait = privelistePhotos.filter((p) => p.orientation === "portrait")
   const interiorPhotos = CURRENT_PHOTOS.filter((p) => p.category === "Interior")
   const interiorLandscape = interiorPhotos.filter((p) => p.orientation === "landscape")
   const interiorPortrait = interiorPhotos.filter((p) => p.orientation === "portrait")
@@ -73,6 +76,50 @@ export function GalerieSection() {
                   </figure>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* Priveliște & rooftop */}
+          {privelistePhotos.length > 0 && (
+            <div className="space-y-3">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
+                Priveliște &amp; rooftop
+              </p>
+
+              {privelisteHero && (
+                <figure className="group overflow-hidden rounded-2xl border bg-card/80 shadow-soft">
+                  <div className="relative aspect-video md:aspect-21/9">
+                    <Image
+                      src={privelisteHero.src}
+                      alt={privelisteHero.alt}
+                      fill
+                      sizes="(min-width: 1024px) 1000px, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                </figure>
+              )}
+
+              {privelistePortrait.length > 0 && (
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {privelistePortrait.map((photo) => (
+                    <figure
+                      key={photo.src}
+                      className="group overflow-hidden rounded-2xl border bg-card/80 shadow-soft"
+                    >
+                      <div className="relative aspect-3/4">
+                        <Image
+                          src={photo.src}
+                          alt={photo.alt}
+                          fill
+                          sizes="(min-width: 1024px) 500px, (min-width: 640px) 50vw, 100vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        />
+                      </div>
+                    </figure>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
