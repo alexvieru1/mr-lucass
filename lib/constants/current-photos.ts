@@ -35,14 +35,20 @@ export const CURRENT_PHOTOS: CurrentPhoto[] = [
   },
   {
     category: "Interior",
+    src: "/images/current/balcon.webp",
+    alt: "Balcon generos cu placare ceramică și parapet finisat, deschidere spre zona verde",
+    orientation: "portrait",
+  },
+  {
+    category: "Interior",
     src: "/images/current/interior-hol.webp",
     alt: "Hol interior cu uși și finisaje realizate",
     orientation: "portrait",
   },
   {
     category: "Interior",
-    src: "/images/current/interior-cabina-dus.webp",
-    alt: "Baie cu cabină de duș, finisaje moderne",
+    src: "/images/current/usa-intrare.webp",
+    alt: "Ușă metalică de intrare în apartament, montată și finisată",
     orientation: "portrait",
   },
   {
@@ -67,6 +73,12 @@ export const CURRENT_PHOTOS: CurrentPhoto[] = [
     category: "Priveliste",
     src: "/images/current/rooftop.webp",
     alt: "Terasă rooftop cu placare lemnoasă și pardoseală finisată",
+    orientation: "portrait",
+  },
+  {
+    category: "Priveliste",
+    src: "/images/current/rooftop-2.webp",
+    alt: "Terasă rooftop cu placare lemnoasă și vedere panoramică spre lacul Siutghiol",
     orientation: "portrait",
   },
   {
